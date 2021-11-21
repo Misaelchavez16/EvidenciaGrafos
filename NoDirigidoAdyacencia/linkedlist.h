@@ -218,7 +218,17 @@ otros métodos*/
       }
       return false;                                                                      //O(1)
     }
+    
+    void set(int index, T dato){ 
 
+      if(size()-1< index||index<0) throw index;   
+
+      NodeLL<T> * auxiliar = head;                                                            //O(1)
+      for(int i = 0; i < index; i++){                                                       //O(n)
+        auxiliar = auxiliar->next;                                                          //O(1)
+      }
+      auxiliar->data= dato;                                                                //O(1)
+    }
 
     /*
     Este método nos permite obtener el valor de cierto NodeLL,   O(n)
